@@ -503,6 +503,7 @@
       "clientAuthenticatorType": "client-secret",
       "redirectUris": [
         "",
+        "https://localhost:7108/*",
         "http://localhost:3000/*"
       ],
       "webOrigins": [
@@ -515,7 +516,7 @@
       "consentRequired": false,
       "standardFlowEnabled": true,
       "implicitFlowEnabled": false,
-      "directAccessGrantsEnabled": false,
+      "directAccessGrantsEnabled": true,
       "serviceAccountsEnabled": false,
       "publicClient": true,
       "frontchannelLogout": true,

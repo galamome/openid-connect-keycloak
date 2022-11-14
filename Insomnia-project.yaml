@@ -1,0 +1,172 @@
+_type: export
+__export_format: 4
+__export_date: 2022-11-14T13:48:42.180Z
+__export_source: insomnia.desktop.app:v2022.6.0
+resources:
+  - _id: req_fa37b9cc10e64c96ac6eb5d7b2c26f90
+    parentId: wrk_e390071adc3c4838b2f0df0d6d816ba0
+    modified: 1668433122822
+    created: 1668072736424
+    url: http://{{ _.url }}/realms/{{ _.realm }}/protocol/openid-connect/token
+    name: Keycloak retrieve token
+    description: ""
+    method: POST
+    body:
+      mimeType: application/x-www-form-urlencoded
+      params:
+        - id: pair_16cd0ccc80f14dad8f9b012e082841a5
+          name: grant_type
+          value: password
+          description: ""
+        - id: pair_ef3e239841134085b0fadd7bf03f7402
+          name: username
+          value: galamome
+          description: ""
+        - id: pair_3dd64ebfa7964b31a55896e655b15fe4
+          name: password
+          value: galamome
+          description: ""
+        - id: pair_b2cabf975e9e4e5abebdee2b10ad3807
+          name: client_id
+          value: MyApp
+          description: ""
+        - id: pair_bc89b55c597b49e5946265201a58f010
+          name: scope
+          value: openid
+          description: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/x-www-form-urlencoded
+    authentication: {}
+    metaSortKey: -1668072736424
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_e390071adc3c4838b2f0df0d6d816ba0
+    parentId: null
+    modified: 1668072621117
+    created: 1668072621117
+    name: My Collection
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_0eec3257a7f547ec9d0192e2d1f6e86d
+    parentId: wrk_e390071adc3c4838b2f0df0d6d816ba0
+    modified: 1668433407217
+    created: 1668433393916
+    url: http://{{ _.url }}/realms/{{ _.realm }}/protocol/openid-connect/token
+    name: Keycloak retrieve token only Reader (not Editor)
+    description: ""
+    method: POST
+    body:
+      mimeType: application/x-www-form-urlencoded
+      params:
+        - id: pair_16cd0ccc80f14dad8f9b012e082841a5
+          name: grant_type
+          value: password
+          description: ""
+        - id: pair_ef3e239841134085b0fadd7bf03f7402
+          name: username
+          value: amerlina
+          description: ""
+        - id: pair_3dd64ebfa7964b31a55896e655b15fe4
+          name: password
+          value: amerlina
+          description: ""
+        - id: pair_b2cabf975e9e4e5abebdee2b10ad3807
+          name: client_id
+          value: MyApp
+          description: ""
+        - id: pair_bc89b55c597b49e5946265201a58f010
+          name: scope
+          value: openid
+          description: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/x-www-form-urlencoded
+    authentication: {}
+    metaSortKey: -1668072507607.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_f9f3d152e810dcd41f6e6d063aea60974a0fdc99
+    parentId: wrk_e390071adc3c4838b2f0df0d6d816ba0
+    modified: 1668072625806
+    created: 1668072621134
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: {}
+    color: null
+    isPrivate: false
+    metaSortKey: 1668072621134
+    _type: environment
+  - _id: jar_f9f3d152e810dcd41f6e6d063aea60974a0fdc99
+    parentId: wrk_e390071adc3c4838b2f0df0d6d816ba0
+    modified: 1668433637239
+    created: 1668072621138
+    name: Default Jar
+    cookies:
+      - key: KEYCLOAK_LOCALE
+        expires: 1970-01-01T00:00:10.000Z
+        maxAge: 0
+        domain: localhost
+        path: /realms/MyRealm/
+        httpOnly: true
+        extensions:
+          - Version=1
+          - Comment=Expiring cookie
+        hostOnly: true
+        creation: 2022-11-10T09:42:48.439Z
+        lastAccessed: 2022-11-14T13:47:17.239Z
+        id: "40608714534321777"
+      - key: KC_RESTART
+        expires: 1970-01-01T00:00:10.000Z
+        maxAge: 0
+        domain: localhost
+        path: /realms/MyRealm/
+        httpOnly: true
+        extensions:
+          - Version=1
+        hostOnly: true
+        creation: 2022-11-10T09:42:48.440Z
+        lastAccessed: 2022-11-14T13:47:17.239Z
+        id: "5818318901212549"
+    _type: cookie_jar
+  - _id: spc_23e3496bd28e4af3bc67f1a5bf1d4996
+    parentId: wrk_e390071adc3c4838b2f0df0d6d816ba0
+    modified: 1668072621119
+    created: 1668072621119
+    fileName: My Collection
+    contents: ""
+    contentType: yaml
+    _type: api_spec
+  - _id: env_47958a88ba5c4ddaa23d6b6b4cb38c4d
+    parentId: env_f9f3d152e810dcd41f6e6d063aea60974a0fdc99
+    modified: 1668072713970
+    created: 1668072640728
+    name: Docker
+    data:
+      url: localhost:8081
+      realm: MyRealm
+      protocol: openid-connect
+    dataPropertyOrder:
+      "&":
+        - url
+        - realm
+        - protocol
+    color: null
+    isPrivate: false
+    metaSortKey: 1668072640728
+    _type: environment
