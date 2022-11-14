@@ -83,28 +83,29 @@
         "clientRole": false,
         "containerId": "7812eeec-bbb3-493f-bc57-089f5602da6e",
         "attributes": {}
-      },
-      {
-        "id": "82acf952-a6e1-4e69-bcb1-6fea421b5c14",
-        "name": "DiffList_Editor",
-        "description": "Can modify (create, update, delete) a Diffusion List",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "7812eeec-bbb3-493f-bc57-089f5602da6e",
-        "attributes": {}
-      },
-      {
-        "id": "5f5c000a-557b-45b0-9adf-0c53dfd6ab3f",
-        "name": "DiffList_Reader",
-        "description": "Can read the Diffusion List",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "7812eeec-bbb3-493f-bc57-089f5602da6e",
-        "attributes": {}
       }
     ],
     "client": {
-      "MyApp": [],
+      "MyApp": [
+        {
+          "id": "f317e120-4dae-42a4-9fd9-7c3f02800a50",
+          "name": "DiffList_Editor",
+          "description": "Can modify (create, update, delete) a Diffusion List",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "c9943357-dc76-4c29-a309-79b7178be7a9",
+          "attributes": {}
+        },
+        {
+          "id": "1eecf01b-2110-4018-ae5a-b6bf4874d879",
+          "name": "DiffList_Reader",
+          "description": "Can read the Diffusion List",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "c9943357-dc76-4c29-a309-79b7178be7a9",
+          "attributes": {}
+        }
+      ],
       "realm-management": [
         {
           "id": "0f704b43-2e32-4beb-87a1-64b5d22e505f",

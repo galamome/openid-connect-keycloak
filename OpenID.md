@@ -42,3 +42,9 @@ curl \
   -d "password=galamome" \
   -d "grant_type=password" \
   "http://localhost:8081/realms/MyRealm/protocol/openid-connect/token"
+```
+
+## A REGARDER ABSOLUMENT : Keycloak React JS
+
+https://www.youtube.com/watch?v=q50LxyGtEf0
+https://github.com/dasniko/keycloak-reactjs-demo/blob/main/src/components/Welcome.jsx
